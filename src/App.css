@@ -1,0 +1,61 @@
+/* src/App.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef;
+    padding: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  /* Add this to your App.css or a separate CSS file */
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.planet-card {
+
+  grid-template-areas: 
+    "name name"
+    "climate population"
+    "terrain terrain"
+    "residents residents";
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.planet-name { grid-area: name; }
+.planet-climate { grid-area: climate; }
+.planet-population { grid-area: population; }
+.planet-terrain { grid-area: terrain; }
+.planet-residents { grid-area: residents; }
+
+  /* Add to your CSS file for styling resident details */
+
+.resident-details {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .resident-detail {
+    margin: 0; /* Removes margin from <p> tags if used for resident details */
+  }
+  
+  .resident-name {
+    font-weight: bold;
+  }
+  
